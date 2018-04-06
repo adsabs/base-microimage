@@ -25,4 +25,5 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
 RUN pip install --upgrade pip && \
     pip install --upgrade setuptools && \
     pip install --upgrade gunicorn==19.6.0 gevent==1.1.2 supervisor==3.3.0 futures==3.0.5 psycogreen==1.0 psycopg2==2.6.1 json-logging-py==0.2
-COPY install_debugging_tools.sh /usr/local/bin/install_debugging_tools.sh
+
+ADD base /base
